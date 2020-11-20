@@ -1,0 +1,189 @@
+/* Import Reset Styles file*/
+@import "reset.css";
+
+* {box-sizing: border-box;}
+
+    .content {
+        margin: 0 auto;
+        font: 1.2em "RO Sans", Calibri, sans-serif;
+        line-height: 1.38272;
+        max-width: 100%;
+    }
+
+
+.nav {
+    background-color: #01689b;
+    min-height: 70px;
+    padding: 25px 60px 20px 30px;
+}
+
+.nav .right-nav {
+    font-size: 20px;
+}
+
+.nav .left-nav {
+    font-size: 26px;
+}
+
+.open-menu {
+    display: none;
+    float: right;
+    color: #fff;
+    font-size: 23px;
+    padding: 0 5px 0 5px;
+}
+
+.open-menu:hover {
+    cursor: pointer;
+    background-color: #03334b;
+}
+
+#clear {
+    clear: both;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav a {
+    color: #fff;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header img {
+    box-sizing: border-box;
+    margin-left: 250px;
+}
+
+
+.lef-nav {
+    float: left;
+}
+
+.right-nav {
+    float: right;
+}
+
+.float-right {
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+
+.float-left {
+    float: left;
+    width: 50%;
+}
+
+.wrapper {
+  margin: 2em;
+  display: grid;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.wrapper li {
+    border: 1px solid #ffec99;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+.services ul{
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+}
+
+.articles ul{
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+}
+
+.news ul{
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+}
+
+.questions ul{
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+}
+
+.languages ul li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+
+@media screen and (max-width: 768px)  {
+    
+    .av-submenu-container ul {
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar; 
+      }
+
+    
+    .right-nav {
+        display: none;
+    }
+
+    .float-right {
+        float: none;
+        width: 100%;
+    }
+    
+    .float-left {
+        float: none;
+        width: 100%;
+    }
+    
+    .open-menu {
+        display: block;
+    }
+
+
+}
+
+@media screen and (max-width: 900px)  {
+    
+    
+    
+    .nav .right-nav {
+        font-size: 18px;
+    }
+
+    .nav .left-nav {
+        font-size: 23px;
+    }
+
+    nav ul li {
+        padding-left: 10px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
