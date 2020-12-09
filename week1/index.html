@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+    <link rel="stylesheet" href="stylesheets/responsive.css">
+
+    <!-- Using font-awesome Icons  -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
+    </script>
+
+    <!-- Using hamburgure menue  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.open-menu').click(function() {
+                $('.h-menu').slideToggle();
+            })
+        })
+    </script>
+
+    <!-- Add Smooth Scrolling for all the browsers -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+    <title>Resume</title>
+
+</head>
+
+<body>
+    <section class="container">
+
+        <!--Start of header -->
+        <section class="header" id="home"></section>
+        <!--End of header -->
+
+
+        <!-- Start of Hamburgure Menu | none-display by defualt -->
+        <nav class="ham-menu">
+            <span class="open-menu"><i class="fas fa-bars"></i></span>
+            <div class="h-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of Hamburgure Menu -->
+
+        <!-- Start of top-sticky-menu | none-display by defualt -->
+        <section class="top-sticky-menu">
+            <ul class="top-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </section>
+        <!--End of top-sticky-menu -->
+
+
+        <!--Start of sticky logo & menu -->
+        <section class="profile_nav">
+            <div class="sticky">
+                <div class="logo">
+                    <img src="images/profile_photo.jpg" alt="profile_photo" class="img-circle">
+                </div>
+                <div class="sticky-menu">
+                    <ul class="primary">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#hobbies">Hobbies</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" class="go_to_top">Top <i class="fa fa-arrow-up"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+        <!--End of sticky logo & menu -->
+
+        <section class="main">
+            <!--Start of profile section -->
+            <section class="profile">
+                <div class="top_title">
+                    <h1>Hi, My Name is Sidika Avalin</h1>
+                    <p>I develop front-end websites and make them awesome!</p>
+                </div>
+
+                <!--Start of About -->
+                <h1 class="title" id="about">About Me</h1>
+                <div class="about">
+                    <p class="about_info">I am an enthusiastic, dedicated and hardworking person with a great passion for making userfriendly websites. Having the ability of high concentration and logical mind, I put my efforts into solving the problems efficiently. With 10
+                        years of work experience and a master's degree in Computer Science, I have learned how to gradually improve the products step by step. I am a positive individual with strong interpersonal skills who believes to work as a team by
+                        considering co‐workers' needs.</p>
+                    <h3>Soft Skills:</h3>
+
+                    <p class="about_info">Troubleshooting and Problem Solving, Communication and Teamwork Skills, Time Managing and Prioritizing Tasks, Active Learning, Organizational Commitment, Concentration Skill<br><br> You can find my works on <a href="https://github.com/scharsooghi"
+                            target="_blank">Github.</a> If you want to hire me please send me an <a href="mailto: scharsooghi@gmail.com" target="_blank">email</a> or <a href="#contact">contact.</a>
+                    </p>
+
+                </div>
+                <!--End of About -->
+
+                <!--Start of skills -->
+                <h1 class="title" id="skills">Technical skills</h1>
+                <div class="about">
+                    <div class="progress_bar">
+                        <h4>HTML 5 - 90%</h4>
+                        <div class="progressbar-element">
+                            <span class="progress" style="width: 90%"></span>
+                        </div>
+                    </div>
+                    <!--Progress Item One-->
+                    <div class="progress_bar">
+                        <h4>CSS 3 - 80%</h4>
+                        <div class="progressbar-element">
+                            <span class="progress" style="width: 80%"></span>
+                        </div>
+                    </div>
+                    <!--Progress Item two-->
+                    <div class="progress_bar">
+                        <h4>Javascript - 60%</h4>
+                        <div class="progressbar-element">
+                            <span class="progress" style="width: 60%"></span>
+                        </div>
+                    </div>
+                    <!--Progress Item three-->
+                    <div class="progress_bar">
+                        <h4>Reactjs - 30%</h4>
+                        <div class="progressbar-element">
+                            <span class="progress" style="width: 30%"></span>
+                        </div>
+                    </div>
+                    <!--Progress Item four-->
+                    <div class="progress_bar">
+                        <h4>Responsive Web Design - 80%</h4>
+                        <div class="progressbar-element">
+                            <span class="progress" style="width: 80%"></span>
+                        </div>
+                    </div>
+                    <!--Progress Item five-->
+                    <div class="progress_bar">
+                        <h4>Photoshop - 60%</h4>
+                        <div class="progressbar-element">
+                            <span class="progress" style="width: 60%"></span>
+                        </div>
+                    </div>
+                    <!--Progress Item six-->
+                    <div class="progress_bar">
+                        <h4>Git - 80%</h4>
+                        <div class="progressbar-element">
+                            <span class="progress" style="width: 80%"></span>
+                        </div>
+                    </div>
+                    <!--Progress Item seven-->
+                    <div class="progress_bar">
+                        <h4>Scrum - 80%</h4>
+                        <div class="progressbar-element">
+                            <span class="progress" style="width: 80%"></span>
+                        </div>
+                    </div>
+                </div>
+                <!--End of skills -->
+
+                <!--Start of work experiences -->
+                <h1 class="title" id="experience">Work Experiences</h1>
+                <div class="about">
+                    <div class="job-items">
+                        <div class="left">
+                            <div class="time">
+                                <div class="year">2020</div>
+                                <div>-</div>
+                                <div class="year">Now</div>
+                                <div class="month">Sep</div>
+                                <div></div>
+                                <div class="month"></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="job-title">Front-end Developer | Intern</div>
+                            <div class="job-addr"><a href="https://www.yayloh.com/" target="_blank">Yayloh, Stockholm - Sweden</a></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="job-items">
+                        <div class="left">
+                            <div class="time">
+                                <div class="year">2019</div>
+                                <div>-</div>
+                                <div class="year">Now</div>
+                                <div class="month">Aug</div>
+                                <div></div>
+                                <div class="month"></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="job-title">Volunteer Job</div>
+                            <div class="job-addr"><a href="https://www.skanestadsmission.se/verksamheter/crossroads-malmo/" target="
+                                _blank">Crossroads, Skåne Stadsmission, Malmö - Sweden</a></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="job-items">
+                        <div class="left">
+                            <div class="time">
+                                <div class="year">2016</div>
+                                <div>-</div>
+                                <div class="year">2018</div>
+                                <div class="month">Sep</div>
+                                <div></div>
+                                <div class="month">Mar</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="job-title">Scratch and Math Teacher</div>
+                            <div class="job-addr">Educational Complexes, Tehran ‐ Iran</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+
+                    <div class="job-items">
+                        <div class="left">
+                            <div class="time">
+                                <div class="year">2016</div>
+                                <div>–</div>
+                                <div class="year">2016</div>
+                                <div class="month">Mar</div>
+                                <div></div>
+                                <div class="month">Sep</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="job-title">Frontend Web Developer</div>
+                            <div class="job-addr">ACECR ‐ Sharif University branch, Tehran ‐ Iran</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="job-items">
+                        <div class="left">
+                            <div class="time">
+                                <div class="year">2012</div>
+                                <div>–</div>
+                                <div class="year">2016</div>
+                                <div class="month">May</div>
+                                <div></div>
+                                <div class="month">Mar</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="job-title">Technician in Information Security Management</div>
+                            <div class="job-addr">ACECR ‐ Sharif University branch, Tehran ‐ Iran</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="job-items">
+                        <div class="left">
+                            <div class="time">
+                                <div class="year">2010</div>
+                                <div>–</div>
+                                <div class="year">2014</div>
+                                <div class="month">Jul</div>
+                                <div></div>
+                                <div class="month">May</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="job-title">Web App Requirement Analysis, Designing and Testing</div>
+                            <div class="job-addr">ACECR ‐ Sharif University branch, Tehran ‐ Iran</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="job-items">
+                        <div class="left">
+                            <div class="time">
+                                <div class="year">2008</div>
+                                <div>–</div>
+                                <div class="year">2008</div>
+                                <div class="month">Jan</div>
+                                <div></div>
+                                <div class="month">Sep</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="job-title">Fullstack Web Developer | Intern</div>
+                            <div class="job-addr">National Organization of Educational Testing (NOET), Tehran ‐ Iran</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <form method="get" action="files/SA-Resume.pdf" target="_blank">
+                        <div class="btn">
+                            <button type="submit" class="main-btn form-control"><i class="fas fa-download"></i> Resume</button>
+                        </div>
+                    </form>
+                </div>
+                <!--End of work experiences -->
+
+                <!--Start of Education -->
+                <h1 class="title" id="education">Education</h1>
+                <div class="about">
+                    <div class="job-items">
+                        <div class="left">
+                            <div class="time">
+                                <div class="year">2010</div>
+                                <div>–</div>
+                                <div class="year">2013</div>
+                                <div class="month">Sep</div>
+                                <div></div>
+                                <div class="month">Feb</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="job-title">Master of Science</div>
+                            <div class="job-addr">Information Technology | University of Shahed – Tehran, Iran</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="job-items">
+                        <div class="left">
+                            <div class="time">
+                                <div class="year">2004</div>
+                                <div>–</div>
+                                <div class="year">2008</div>
+                                <div class="month">Sep</div>
+                                <div></div>
+                                <div class="month">Sep</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="job-title">Bachelor of Science</div>
+                            <div class="job-addr">Computer Science | Shahid Beheshti University – Tehran, Iran</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <!--Start of Education -->
+
+                <!--Start of Hobbies-->
+                <h1 class="title" id="hobbies">Hobbies</h1>
+                <div class="about">
+                    <div class="hobbies">
+                        <div>
+                            <img src="https://image.flaticon.com/icons/png/128/3836/3836910.png" alt="Doing exercise">
+                            <div class="hobby">Doing exercise</div>
+                        </div>
+                        <div>
+                            <img src="https://image.flaticon.com/icons/png/128/649/649395.png" alt="Cooking/baking">
+                            <div class="hobby">Cooking-baking</div>
+                        </div>
+                        <div>
+                            <img src="https://image.flaticon.com/icons/png/128/1830/1830752.png" alt="Reading book">
+                            <div class="hobby">Reading book</div>
+                        </div>
+                        <div>
+                            <img src="https://image.flaticon.com/icons/png/128/2933/2933475.png" alt="Watching movie">
+                            <div class="hobby">Watching movie</div>
+                        </div>
+                        <div>
+                            <img src="https://image.flaticon.com/icons/png/128/1706/1706709.png" alt="Going out">
+                            <div class="hobby">Going out</div>
+                        </div>
+                        <div><img src="https://image.flaticon.com/icons/png/128/864/864510.png" alt="Play Reading">
+                            <div class="hobby">Play Reading</div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--End of Hobbies-->
+
+                <!--Start of Contact-->
+                <section class="contact" id="contact">
+                    <h1 class="title">Contact Me</h1>
+                    <form id="my-form" action="javascript:void();">
+                        <div class="controls">
+                            <div class="input-group input">
+                                <input class="form-control" name="name" placeholder="First Name *" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name *'">
+                            </div>
+                            <div class="input-group input">
+                                <input class="form-control" name="surname" placeholder="Last Name *" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name *'">
+
+                            </div>
+                            <div class="input-group input">
+                                <input class="form-control" name="email" placeholder="Email *" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email *'">
+                            </div>
+                            <div class="input-group input">
+                                <input class="form-control" name="phone" placeholder="Phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone *'">
+                            </div>
+                            <div class="input-group msg_box">
+                                <textarea class="form-control" name="message" placeholder="Type your email here! If you want to say just “Hi”, that is also okay." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type your email here! If you want to say just “Hi”, that is also okay.'"></textarea>
+                            </div>
+                            <div class="btn">
+                                <button type="submit" class="main-btn form-control" onclick="this.form.reset();">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <!--End of contact -->
+
+
+            </section>
+            <!--End of profile section -->
+
+        </section>
+
+        <!-- Start footer section -->
+        <section class="footer">
+            <div class="footer-container">
+                <div class="footer_social">
+                    <a href="https://github.com/scharsooghi" target="_blank"><i class="fab fa-github"  title="github"></i></a>
+                    <a href="https://www.linkedin.com/in/sidika314/" target="_blank"><i class="fab fa-linkedin"  title="linkedin"></i></a>
+                    <a href="https://trello.com/b/Ke56uDGV/m08" target="_blank"><i class="fab fa-trello"  title="trello"></i></a>
+                    <a href="mailto: scharsooghi@gmail.com" target="_blank"><i class="fab fa-google"  title="gmail"></i></a>
+                </div>
+                <p>© Designd by <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+            </div>
+        </section>
+        <!-- End footer section -->
+    </section>
+</body>
+
+</html>

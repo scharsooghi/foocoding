@@ -1,0 +1,559 @@
+/*
+1. General Styles
+2. Header and Menus
+    - hamburgure menu
+    - Top sticky menu
+    - left sticky logo & menu
+3. Main (Profile)
+    - About me
+    - Skills
+    - Experience and Education
+    - Hobbies
+    - Contact me
+4. Footer 
+ */
+
+
+/* ---------------------------------------- 1. Start of General Styles --------------------------------------- */
+
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900';
+body {
+    background: #fff;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6em;
+    overflow-x: hidden;
+    color: #404040;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    margin-bottom: 0px;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #00bbcc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #028f9c;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 18px !important;
+    font-family: 'Lato', sans-serif !important;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 18px !important;
+    font-family: 'Lato', sans-serif !important;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 18px !important;
+    font-family: 'Lato', sans-serif !important;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 18px !important;
+    font-family: 'Lato', sans-serif !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    margin: auto;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.form-control:focus {
+    border-color: #00b3ab;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1px rgba(0, 179, 171, 1) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 1px rgba(0, 179, 171, 1) !important;
+}
+
+
+/* ----------------------------------------  End of General Styles --------------------------------------- */
+
+
+/* -----------------------------------  2. Start of Header and Menus --------------------------------------- */
+
+
+/*===== Header - start =====*/
+
+.header {
+    width: 100%;
+    background: url(../images/header_bacground.jpg) no-repeat center center;
+    min-height: 200px;
+    grid-column: span 4;
+}
+
+
+/*===== Header - end =====*/
+
+
+/*===== hamburgure menu - start =====*/
+
+.ham-menu {
+    display: none;
+    position: fixed;
+    min-width: 0;
+    padding-left: 0;
+    z-index: 2;
+    background: rgba(55, 55, 55, 0.1);
+    border-radius: 10px;
+}
+
+.open-menu {
+    display: none;
+    color: #00bbcc;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.open-menu:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.h-menu ul {
+    list-style: none;
+    margin-left: 0;
+    padding: 0 5px;
+}
+
+
+/*===== hamburgure menu - end =====*/
+
+
+/*===== Top sticky menu - start =====*/
+
+.top-sticky-menu {
+    grid-column: span 4;
+    display: none;
+    height: 50px;
+    background-color: #00bbcc;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+}
+
+.top-sticky-menu ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.top-sticky-menu li:nth-child(1) {
+    padding-left: 0;
+}
+
+.top-sticky-menu a {
+    color: #fff;
+}
+
+.top-sticky-menu a:hover {
+    color: #373737;
+}
+
+
+/*===== Top sticky menu - end =====*/
+
+
+/*===== left sticky logo & menu - start =====*/
+
+.profile_nav {
+    grid-column: span 1;
+    /* background-color: crimson; */
+}
+
+.sticky {
+    position: fixed;
+    display: block;
+    z-index: 1000;
+    margin-left: 50px;
+}
+
+
+/* circle logo image - start */
+
+.logo img {
+    margin-top: -120px;
+    max-width: 300px;
+}
+
+.img-circle {
+    -moz-border-radius: 50% !important;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+
+/* circle logo image - end  */
+
+.sticky-menu {
+    background: #f2f2f2;
+    margin-top: -130px;
+    max-width: 200px;
+    margin-left: 25px;
+    padding-top: 100px;
+    padding-bottom: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.profile_nav ul {
+    list-style: none;
+    margin-top: 40px;
+}
+
+.profile_nav .primary li {
+    padding-left: 20px;
+    color: #373737;
+    text-align: left;
+    height: 20px;
+}
+
+.profile_nav .primary li a {
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.profile_nav .primary li a:hover {
+    color: #0abfbf;
+}
+
+.go_to_top i {
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+
+/*===== left sticky logo & menu - end =====*/
+
+
+/* -----------------------------------  End of Header and Menus --------------------------------------- */
+
+
+/* -----------------------------------  3. Start of main (profile) --------------------------------------- */
+
+.main {
+    grid-column: span 3;
+    /* background-color: rgb(165, 193, 194); */
+    text-align: justify;
+}
+
+.profile {
+    width: 90%;
+    margin: auto;
+}
+
+.about {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+h1.title {
+    color: #404040;
+    border-bottom: 1px solid #bfbfbf;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    padding: 50px 0 36px 0;
+}
+
+
+/*===== Main Profile - about me -start =====*/
+
+.top_title h1 {
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    margin-top: -50px;
+    font-size: 48px;
+    text-align: center;
+}
+
+.top_title p {
+    color: #808080;
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    margin-top: 32px;
+    text-align: center;
+    animation: colorChange 5s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #404040;
+    }
+    50% {
+        color: #00bbcc;
+    }
+    100% {
+        color: #404040;
+    }
+}
+
+.about_info {
+    line-height: 36px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin: 19px 0 50px 0;
+}
+
+
+/*===== Main Profile - about me -end =====*/
+
+
+/*===== Main Profile - Technical Skills -start  =====*/
+
+.progress_bar h4 {
+    color: #808080 !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.progressbar-element .progress {
+    height: 3px !important;
+    background: #00bbcc;
+    display: block;
+    border-radius: 5px 0 0 5px;
+}
+
+.progressbar-element {
+    width: 100%;
+    margin-bottom: 30px;
+    background: #DAE3F3;
+    border-radius: 5px;
+}
+
+
+/*===== Main Profile - Technical Skills -end  =====*/
+
+
+/*===== Main Profile - Experiences & Education -start  =====*/
+
+.left {
+    float: left;
+    width: 10%;
+}
+
+.right {
+    float: right;
+    width: 90%;
+    padding-left: 20px;
+}
+
+.time {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.job-title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.job-addr {
+    color: #00bbcc;
+}
+
+.year {
+    font-weight: bold;
+}
+
+.month {
+    color: #808080;
+    font-size: 0.8em;
+}
+
+.job-items {
+    margin-bottom: 40px;
+}
+
+
+/*===== Main Profile - Experiences & Education -end  =====*/
+
+
+/*===== Main Profile - Hobbies -start  =====*/
+
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+    text-align: center;
+}
+
+.hobbies div {
+    color: #00b3ab;
+    font-size: 0.9em;
+    border-radius: 5px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 2px -1px 14px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px -1px 14px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px -1px 14px -4px rgba(0, 0, 0, 0.75);
+}
+
+.hobbies div:hover {
+    color: #808080;
+    transform: translate3D(0, -1px, 0) scale(1.03);
+    cursor: pointer;
+    -webkit-box-shadow: 2px -1px 14px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px -1px 14px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px -1px 14px -4px rgb(0, 179, 171);
+}
+
+.hobbies img {
+    max-width: 70%;
+}
+
+.hobby {
+    padding: 10px;
+}
+
+
+/*===== Main Profile - Hobbies -end  =====*/
+
+
+/*===== Main Profile - Contact -start  =====*/
+
+.contact {
+    padding-bottom: 50px;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    align-content: center;
+}
+
+.msg_box {
+    grid-column: span 4;
+}
+
+.btn {
+    grid-column: span 4;
+    text-align: center;
+}
+
+.contact .input-group input {
+    border: 1px solid #cccccc !important;
+    background: #f7f7f7 !important;
+    border-radius: 5px !important;
+    height: 40px;
+    padding: 0px 0px 0px 10px !important;
+    width: 100%;
+    font-size: 18px;
+}
+
+.msg_box textarea {
+    width: 100%;
+    border: 1px solid #cccccc !important;
+    background: #f7f7f7 !important;
+    border-radius: 5px !important;
+    height: 150px !important;
+    padding-top: 20px !important;
+    padding-left: 10px !important;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+.main-btn {
+    background: #00bbcc;
+    border: none;
+    color: #fff;
+    min-width: 160px;
+    min-height: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px !important;
+    font-weight: 900 !important;
+    padding: 10px 0px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.main-btn:hover {
+    background: #00c2cc;
+    cursor: pointer;
+}
+
+
+/*===== Main Profile - Contact -end  =====*/
+
+
+/* -----------------------------------  End of main (profile) --------------------------------------- */
+
+
+/* -----------------------------------  4. Start of Footer --------------------------------------- */
+
+.footer {
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height: auto;
+    color: #404040;
+    background: #f2f2f2;
+}
+
+.footer-container {
+    grid-column: 2/5;
+    /* background-color: darkorchid; */
+}
+
+.footer_social {
+    padding-top: 10px;
+    font-size: 30px;
+    text-align: center;
+    color: #404040;
+}
+
+.footer_social a {
+    color: #404040;
+    padding: 0 10px;
+}
+
+.footer_social a:hover {
+    color: #00bbcc;
+}
+
+.footer p {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+/* -----------------------------------  End of Footer --------------------------------------- */
